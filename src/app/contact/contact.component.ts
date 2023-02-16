@@ -22,9 +22,13 @@ export class ContactComponent {
 
   public info()
   {
-    alert(this.service.getData())
+    //alert(this.service.getData())
     //alert("Hello tout le monde");
     //console.log("Hello from console");
+    this.service.getData().subscribe(
+         data => { console.log( data)}
+    );
+
   }
 
 }
