@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -15,10 +15,16 @@ export class ContactComponent {
 
   locale:string="https://ecole-it.com/wp-content/uploads/2020/08/0601626159445-web-tete-500x500.jpg"
 
+  constructor(private service: UserService) // injection de dépencences
+
+  { }
+
+
   public info()
   {
-    alert("Hello tout le monde");
-    console.log("Hello from console");
+    alert(this.service.getData())
+    //alert("Hello tout le monde");
+    //console.log("Hello from console");
   }
 
 }
