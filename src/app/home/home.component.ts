@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Etudiant } from '../models';
 
 @Component({
   selector: 'app-home',
@@ -11,5 +12,11 @@ export class HomeComponent {
   nomecole : string = "Ecole IT";
   nbreStagiaires:number = 40;
   names:string[]=["Amine","Alain","Mathieu","Sara"]
+
+  e1:Etudiant = new Etudiant("Alain","alin@gmail.com","+33123456789");
+  e2:Etudiant = new Etudiant("Bruno","bruno@gmail.com","+33123456789");
+
+  students : Etudiant[] = [this.e1,this.e2];
+
 
 }

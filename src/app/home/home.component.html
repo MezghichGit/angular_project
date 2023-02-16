@@ -7,3 +7,17 @@
 <ul>
   <li *ngFor="let name of names">{{name | uppercase}}</li>
 </ul>
+<hr />
+<table border="1" align="center">
+  <tr>
+    <th>Nom</th>
+    <th>Email</th>
+    <th>Téléphone</th>
+  </tr>
+  <tr *ngFor="let student of students">
+    <td>{{student.nom }}</td>
+    <td>{{student.email }}</td>
+    <td>{{student.tel }}</td>
+  </tr>
+
+</table>
