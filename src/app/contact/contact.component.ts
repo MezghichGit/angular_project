@@ -19,14 +19,17 @@ export class ContactComponent {
 
   { }
 
-
+   users:any;
   public info()
   {
     //alert(this.service.getData())
     //alert("Hello tout le monde");
     //console.log("Hello from console");
     this.service.getData().subscribe(
-         data => { console.log( data)}
+         data => {
+           console.log( data);
+           this.users = data;
+        }
     );
 
   }
